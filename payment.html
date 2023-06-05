@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+           margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h3 style="color:red;">銀行ATM匯款：中國信託</h3>
+        <p style="font-size: 30px;">銀行代碼：822</p>
+        <p class="texts">439540386444</p>
+        <button class="btnCopy">複製帳號</button>
+    </div>
+    <div class="wrap">
+        <h3 style="color:green;">街口支付</h3>
+        <p style="font-size: 30px;">銀行代碼：396</p>
+        <p class="texts">908824601</p>
+        <button class="btnCopy">複製帳號</button>
+    </div>
+    
+
+    <script>
+        console.clear();
+
+
+        const btnCopy = document.querySelector('.btnCopy');
+
+        btnCopy.addEventListener('click', function() {
+            const range = document.createRange();
+            const texts = document.querySelector('.texts');
+            range.selectNode(texts);
+            
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            document.execCommand('copy');
+            selection.removeAllRanges();
+        });
+
+    </script>
+</body>
+</html>
