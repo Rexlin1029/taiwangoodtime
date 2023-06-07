@@ -195,7 +195,8 @@
 </script> 
 
 
-<script>function getCookie(t) {
+<script>
+function getCookie(t) {
     for(var e=t+"=", n=decodeURIComponent(document.cookie).split(";"), o=0;
     o<n.length;
     o++) {
@@ -208,6 +209,7 @@
 }
 
 getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;", location.reload());
+
 var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],
 notification=document.getElementsByClassName("notice notice-success is-dismissible"),
 hostingerLogo=document.getElementsByClassName("hlogo"),
