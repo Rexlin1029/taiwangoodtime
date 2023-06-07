@@ -59,43 +59,43 @@
     </md-content>
     <md-content flex layout-padding ng-show="!main">
                     <form name="sendForm">
-                                            <div ng-show="flight">
-                                                <md-input-container class="md-icon-float md-block">
+                                <div ng-show="flight">
+                                    <md-input-container class="md-icon-float md-block">
 
-                                                    <label class="md-required" for="input_1">📆日期</label>
-                                                    <input ng-model="user.rideDate" type="date" placeholder="📆日期" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_1" required="required" aria-invalid="false" style="">
-                                                    <div class="md-errors-spacer"></div>
-                                                </md-input-container>
-                                                <md-input-container class="md-icon-float md-block ng-scope md-input-has-placeholder md-input-has-value" ng-if="flight" style="">
+                                        <label class="md-required" for="input_1">📆日期</label>
+                                        <input ng-model="user.rideDate" type="date" placeholder="📆日期" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_1" required="required" aria-invalid="false" style="">
+                                        <div class="md-errors-spacer"></div>
+                                    </md-input-container>
+                                    <md-input-container class="md-icon-float md-block ng-scope md-input-has-placeholder md-input-has-value" ng-if="flight" style="">
 
-                                                    <label for="input_9" class="md-required">⏰時間</label>
-                                                    <input ng-model="user.rideTime" type="time" placeholder="⏰時間" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_9" required="required" aria-invalid="false" style="">
-                                                    <div class="md-errors-spacer"></div>
-                                                </md-input-container>
-                                                <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
-                                                    <label class="md-required" for="input_3">🚗上車</label>
-                                                    <input ng-model="user.getOnPlace" type="text" placeholder="上車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_3" required="required" aria-invalid="true" style="">
-                                                    <div class="md-errors-spacer"></div>
-                                                </md-input-container>
-                                                <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
-                                                    <label class="md-required" for="input_4">🚗下車</label>
-                                                    <input ng-model="user.getOffPlace" type="text" placeholder="下車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_4" required="required" aria-invalid="true" style="">
-                                                    <div class="md-errors-spacer"></div>
-                                                </md-input-container>
-                                <!-- ngIf: !flight -->
-                                <!-- ngIf: flight -->
-                                                <div layout-gt-xs="row" ng-if="flight" class="ng-scope layout-gt-xs-row" style="">
-                                                    <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
-                                                        <label for="input_10" class="md-required">😃人數</label>
-                                                        <input ng-model="user.peopleNumber" type="number" placeholder="人數 (必須)" min="1" ng-required="true" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_10" required="required" aria-invalid="false">
-                                                        <div class="md-errors-spacer"></div>
-                                                    </md-input-container>
-                                                    <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
-                                                        <label for="input_11" class="md-required">🧳行李</label>
-                                                        <input ng-model="user.baggageNumber" type="number" placeholder="行李 (必須)" min="0" ng-required="flight" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_11" required="required" aria-invalid="false">
-                                                        <div class="md-errors-spacer"></div>
-                                                    </md-input-container>
-                                                </div>
+                                        <label for="input_9" class="md-required">⏰時間</label>
+                                        <input ng-model="user.rideTime" type="time" placeholder="⏰時間" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_9" required="required" aria-invalid="false" style="">
+                                        <div class="md-errors-spacer"></div>
+                                    </md-input-container>
+                                    <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
+                                        <label class="md-required" for="input_3">🚗上車</label>
+                                        <input ng-model="user.getOnPlace" type="text" placeholder="上車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_3" required="required" aria-invalid="true" style="">
+                                        <div class="md-errors-spacer"></div>
+                                    </md-input-container>
+                                    <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
+                                        <label class="md-required" for="input_4">🚗下車</label>
+                                        <input ng-model="user.getOffPlace" type="text" placeholder="下車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_4" required="required" aria-invalid="true" style="">
+                                        <div class="md-errors-spacer"></div>
+                                    </md-input-container>
+                    <!-- ngIf: !flight -->
+                    <!-- ngIf: flight -->
+                                    <div layout-gt-xs="row" ng-if="flight" class="ng-scope layout-gt-xs-row" style="">
+                                        <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
+                                            <label for="input_10" class="md-required">😃人數</label>
+                                            <input ng-model="user.peopleNumber" type="number" placeholder="人數 (必須)" min="1" ng-required="true" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_10" required="required" aria-invalid="false">
+                                            <div class="md-errors-spacer"></div>
+                                        </md-input-container>
+                                        <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
+                                            <label for="input_11" class="md-required">🧳行李</label>
+                                            <input ng-model="user.baggageNumber" type="number" placeholder="行李 (必須)" min="0" ng-required="flight" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_11" required="required" aria-invalid="false">
+                                            <div class="md-errors-spacer"></div>
+                                        </md-input-container>
+                                    </div>
                                                         <!-- end ngIf: flight -->
                                                         <!-- ngIf: flight -->
                                 <div ng-if="flight" class="ng-scope" style="">
