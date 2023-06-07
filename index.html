@@ -37,96 +37,96 @@
 </head>
 
 <body ng-app="BlankApp" ng-cloak>
-    <div ng-controller="AppCtrl" layout="column" ng-cloak>
-        <md-toolbar>
+<div ng-controller="AppCtrl" layout="column" ng-cloak>
+    <md-toolbar>
             <div class="md-toolbar-tools" layout-align="center center" style="background-color: #c4e718;">
                 <h2 class="md-flex">✈️️天晴旅遊・機場接送訂單✈️</i> &nbsp;&nbsp;
                 
             </div>
-        </md-toolbar>
-        <md-content flex layout-padding ng-show="main"> 
+    </md-toolbar>
+    <md-content flex layout-padding ng-show="main"> 
     
-    <section>
-            <md-subheader class="md-primary">
-            <h1 layout="row" layout-align="center center" style="color: #000000;">
-            </md-list-item> 
-            </md-list>
+        <section>
+                <md-subheader class="md-primary">
+                <h1 layout="row" layout-align="center center" style="color: #000000;">
+                </md-list-item> 
+                </md-list>
 
-    </section> 
-    <section layout="column" flex="100"> 
-        <md-button class="md-raised md-warn" ng-click="goto('page2')" name="page2" style="background-color: #000000;"> 按我預約叫車 </md-button>
-    </section> 
-        </md-content>
-        <md-content flex layout-padding ng-show="!main">
-        <form name="sendForm">
-            <div ng-show="flight">
-                 <md-input-container class="md-icon-float md-block">
+        </section> 
+        <section layout="column" flex="100"> 
+            <md-button class="md-raised md-warn" ng-click="goto('page2')" name="page2" style="background-color: #000000;"> 按我預約叫車 </md-button>
+        </section> 
+    </md-content>
+    <md-content flex layout-padding ng-show="!main">
+                    <form name="sendForm">
+                                            <div ng-show="flight">
+                                                <md-input-container class="md-icon-float md-block">
 
-                    <label class="md-required" for="input_1">📆日期</label>
-                    <input ng-model="user.rideDate" type="date" placeholder="📆日期" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_1" required="required" aria-invalid="false" style="">
-                    <div class="md-errors-spacer"></div>
-                </md-input-container>
-                <md-input-container class="md-icon-float md-block ng-scope md-input-has-placeholder md-input-has-value" ng-if="flight" style="">
+                                                    <label class="md-required" for="input_1">📆日期</label>
+                                                    <input ng-model="user.rideDate" type="date" placeholder="📆日期" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_1" required="required" aria-invalid="false" style="">
+                                                    <div class="md-errors-spacer"></div>
+                                                </md-input-container>
+                                                <md-input-container class="md-icon-float md-block ng-scope md-input-has-placeholder md-input-has-value" ng-if="flight" style="">
 
-                    <label for="input_9" class="md-required">⏰時間</label>
-                    <input ng-model="user.rideTime" type="time" placeholder="⏰時間" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_9" required="required" aria-invalid="false" style="">
-                    <div class="md-errors-spacer"></div>
-                </md-input-container>
-                <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
-                    <label class="md-required" for="input_3">🚗上車</label>
-                    <input ng-model="user.getOnPlace" type="text" placeholder="上車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_3" required="required" aria-invalid="true" style="">
-                    <div class="md-errors-spacer"></div>
-                </md-input-container>
-                <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
-                    <label class="md-required" for="input_4">🚗下車</label>
-                    <input ng-model="user.getOffPlace" type="text" placeholder="下車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_4" required="required" aria-invalid="true" style="">
-                    <div class="md-errors-spacer"></div>
-                </md-input-container>
-<!-- ngIf: !flight -->
-<!-- ngIf: flight -->
-                <div layout-gt-xs="row" ng-if="flight" class="ng-scope layout-gt-xs-row" style="">
-                    <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
-                        <label for="input_10" class="md-required">😃人數</label>
-                        <input ng-model="user.peopleNumber" type="number" placeholder="人數 (必須)" min="1" ng-required="true" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_10" required="required" aria-invalid="false">
-                        <div class="md-errors-spacer"></div>
-                    </md-input-container>
-                    <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
-                        <label for="input_11" class="md-required">🧳行李</label>
-                        <input ng-model="user.baggageNumber" type="number" placeholder="行李 (必須)" min="0" ng-required="flight" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_11" required="required" aria-invalid="false">
-                        <div class="md-errors-spacer"></div>
-                    </md-input-container>
-                </div>
-<!-- end ngIf: flight -->
-<!-- ngIf: flight -->
-<div ng-if="flight" class="ng-scope" style="">
-     <md-input-container class="md-icon-float md-block md-input-has-placeholder">
-                        <label for="input_13">📌備註</label>
-                        <input ng-model="user.terminal" type="text" placeholder="備註" class="ng-pristine ng-untouched ng-valid md-input ng-empty" id="input_13" aria-invalid="false">
-                        <div class="md-errors-spacer"></div>
-    </md-input-container>
-<!-- end ngIf: flight -->
-<div ng-hide="flight" aria-hidden="true" class="ng-hide" style="">
-    <md-input-container class="md-block">
-        <label for="input_5">備註</label>
-        <div class="md-resize-wrapper">
-            <textarea ng-model="user.note" md-maxlength="150" rows="1" md-select-on-focus="" class="ng-pristine ng-untouched ng-valid md-input ng-empty ng-valid-md-maxlength" id="input_5" aria-invalid="false" ng-trim="false" style="height: 0px;"></textarea>
-            <div class="md-resize-handle" style="touch-action: pan-x;"></div>
-        </div>
-        <div class="md-errors-spacer">
-            <div class="md-char-counter">0 / 150</div>
-        </div>
-    </md-input-container>
-</div>
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="layout-wrap layout-sm-column layout-align-center-center layout-row">
+                                                    <label for="input_9" class="md-required">⏰時間</label>
+                                                    <input ng-model="user.rideTime" type="time" placeholder="⏰時間" ng-required="true" class="ng-pristine ng-valid md-input ng-not-empty ng-valid-required ng-touched" id="input_9" required="required" aria-invalid="false" style="">
+                                                    <div class="md-errors-spacer"></div>
+                                                </md-input-container>
+                                                <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
+                                                    <label class="md-required" for="input_3">🚗上車</label>
+                                                    <input ng-model="user.getOnPlace" type="text" placeholder="上車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_3" required="required" aria-invalid="true" style="">
+                                                    <div class="md-errors-spacer"></div>
+                                                </md-input-container>
+                                                <md-input-container class="md-icon-float md-block md-input-has-placeholder md-input-invalid">
+                                                    <label class="md-required" for="input_4">🚗下車</label>
+                                                    <input ng-model="user.getOffPlace" type="text" placeholder="下車" ng-required="true" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" id="input_4" required="required" aria-invalid="true" style="">
+                                                    <div class="md-errors-spacer"></div>
+                                                </md-input-container>
+                                <!-- ngIf: !flight -->
+                                <!-- ngIf: flight -->
+                                                <div layout-gt-xs="row" ng-if="flight" class="ng-scope layout-gt-xs-row" style="">
+                                                    <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
+                                                        <label for="input_10" class="md-required">😃人數</label>
+                                                        <input ng-model="user.peopleNumber" type="number" placeholder="人數 (必須)" min="1" ng-required="true" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_10" required="required" aria-invalid="false">
+                                                        <div class="md-errors-spacer"></div>
+                                                    </md-input-container>
+                                                    <md-input-container class="md-icon-float md-input-has-placeholder md-input-has-value flex-50" flex="50">
+                                                        <label for="input_11" class="md-required">🧳行李</label>
+                                                        <input ng-model="user.baggageNumber" type="number" placeholder="行李 (必須)" min="0" ng-required="flight" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty ng-valid-min ng-valid-required" id="input_11" required="required" aria-invalid="false">
+                                                        <div class="md-errors-spacer"></div>
+                                                    </md-input-container>
+                                                </div>
+                                                        <!-- end ngIf: flight -->
+                                                        <!-- ngIf: flight -->
+                                <div ng-if="flight" class="ng-scope" style="">
+                                    <md-input-container class="md-icon-float md-block md-input-has-placeholder">
+                                                        <label for="input_13">📌備註</label>
+                                                        <input ng-model="user.terminal" type="text" placeholder="備註" class="ng-pristine ng-untouched ng-valid md-input ng-empty" id="input_13" aria-invalid="false">
+                                                        <div class="md-errors-spacer"></div>
+                                    </md-input-container>
+                                                        <!-- end ngIf: flight -->
+                                    <div ng-hide="flight" aria-hidden="true" class="ng-hide" style="">
+                                        <md-input-container class="md-block">
+                                            <label for="input_5">備註</label>
+                                            <div class="md-resize-wrapper">
+                                                <textarea ng-model="user.note" md-maxlength="150" rows="1" md-select-on-focus="" class="ng-pristine ng-untouched ng-valid md-input ng-empty ng-valid-md-maxlength" id="input_5" aria-invalid="false" ng-trim="false" style="height: 0px;"></textarea>
+                                                <div class="md-resize-handle" style="touch-action: pan-x;"></div>
+                                            </div>
+                                            <div class="md-errors-spacer">
+                                                <div class="md-char-counter">0 / 150</div>
+                                            </div>
+                                        </md-input-container>
+                                    </div>
+                                    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="layout-wrap layout-sm-column layout-align-center-center layout-row">
 
-</md-button>
-<md-button class="md-raised md-line" type="button" ng-click="send()" ng-disabled="sendForm.$invalid">
-<mat-icon class="fab fa-line"></mat-icon>
- 傳送至 LINE@ 
-</md-button> 
-<input ng-model="user.service" type="hidden" ng-required="true"> 
-</section></form> 
-</md-content>
+                                        </md-button>
+                                        <md-button class="md-raised md-line" type="button" ng-click="send()" ng-disabled="sendForm.$invalid">
+                                            <mat-icon class="fab fa-line"></mat-icon>傳送至 LINE@ 
+                                        </md-button> 
+                                        <input ng-model="user.service" type="hidden" ng-required="true"> 
+                                    </section>
+                    </form> 
+    </md-content>
 </div> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
