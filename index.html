@@ -35,7 +35,7 @@
         <div class="col-10 mx-auto my-5" >
             <form class="row g-2">
                     <!-- 接送機 -->
-                 <div class="form-check col-md-2">
+                 <div class="form-check col-md-6">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1" >
                       送機
@@ -43,7 +43,7 @@
                     </label>
                   </div>
 
-                  <div class="form-check col-md-10">
+                  <div class="form-check col-md-6">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                     <label class="form-check-label" for="flexRadioDefault2">
                       接機
@@ -87,7 +87,15 @@
                         </div>
                     </div>
                     <!-- 搭車人數行李件數 -->
-                    <i class="fa-solid fa-people-group"></i>
+                        <div class="col">
+                            <i class="fa-solid fa-people-group">乘客人數</i>
+                          <input type="text" class="form-control" placeholder="人數" aria-label="passenager">
+                        </div>
+
+                        <div class="col">
+                            <i class="fa-solid fa-suitcase-rolling">行李件數</i>
+                          <input type="text" class="form-control" placeholder="規格在29寸行李以內之數量" aria-label="suitcase">
+                        </div>
 
                     <!-- 地址 -->
                   <div class="col-12">
