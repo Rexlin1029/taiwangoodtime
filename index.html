@@ -14,12 +14,27 @@
             color: greenyellow;
         }
     </style>
+    <script>
+                var testInput = document.getElementById("testInput");
+                var submitBtn = document.querySelector(".submitBtn");
+
+                function FsubmitBtn(value) {
+                var str = "";
+                var submitValue = testInput.value;
+                str = submitValue;
+                alert(str);
+                }
+                submitBtn.addEventListener("click", FsubmitBtn);
+
+    </script>
 </head>
 <body>
   <div class="container">
+    <h3 class="col-10 mx-auto my-1">天晴旅遊．機場接送客戶表單</h3>
     <div class="row">
         <div class="col-10 mx-auto my-5" >
             <form class="row g-2">
+                    
                  <div class="form-check col-md-2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1" >
@@ -33,14 +48,42 @@
                       接機
                     </label>
                   </div>
-                <div class="col-md-12">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
-                </div>
+
+                  <div class="col-md-3">
+                    <span>預約日期:</span>
+                    <input type="date" id="start" name="trip-start"
+                    value="2023-06-10"
+                    min="2023-06-10" max="2030-12-31">
+                  </div>
+                  <div class="col-md-3">
+                    <span>用車時間:</span>
+                    <input type="time" id="appt" name="appt"
+                    min="09:00" max="18:00" value="09:00" >
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">姓名</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="姓名" aria-describedby="basic-addon1">
+                  </div>
+                  <br><br><br>
+                  &nbsp;
+                  <div class="col-md-3">
+                    <span>聯絡電話:</span>
+                    <input type="tel" aria-setsize="10" class="form-control" id="phone" name="phone"
+                    pattern="[0-9]{10}"
+                    size="10" required>
+                  </div>
+
+                
                 
                 <div class="col-12">
-                  <label for="inputAddress" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <label for="inputState" class="form-label">地址</label>
+                    <span>地址</span>
+                    <select id="inputState" class="form-select">
+                        <option selected>縣市</option>
+                        <option>台北市</option>
+                        <option>新北市</option>
+                    </select>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="請輸入區">
                 </div>
                 <div class="col-12">
                   <label for="inputAddress2" class="form-label">Address 2</label>
