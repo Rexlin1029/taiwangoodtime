@@ -8,7 +8,7 @@
     <script src="js/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/09fb968f77.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <title>接送機填寫表單系統</title>
+    <title>客戶資料表單</title>
     <style>
         .btnColor {
             color: greenyellow;
@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col-10 mx-auto my-5" >
             <form class="row g-2">
-                    
+                    <!-- 接送機 -->
                  <div class="form-check col-md-2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1" >
@@ -42,82 +42,69 @@
       
                     </label>
                   </div>
+
                   <div class="form-check col-md-10">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                     <label class="form-check-label" for="flexRadioDefault2">
                       接機
                     </label>
                   </div>
-
+                    <!-- 日期.時間 -->
                   <div class="col-md-3">
                     <span>預約日期:</span>
                     <input type="date" id="start" name="trip-start"
                     value="2023-06-10"
                     min="2023-06-10" max="2030-12-31">
                   </div>
+
                   <div class="col-md-3">
                     <span>用車時間:</span>
                     <input type="time" id="appt" name="appt"
                     min="09:00" max="18:00" value="09:00" >
                   </div>
+                    <!-- 姓名連絡電話 -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">姓名</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="姓名" aria-describedby="basic-addon1">
+                    <span class="fa-solid fa-user-large"></span>
+                    <span class="input-group-text " id="basic-addon1">姓名</span>
+                    <input type="text" class="form-control " placeholder="請填寫姓名" aria-label="姓名" aria-describedby="basic-addon1" >
                   </div>
-                  <br><br><br>
-                  &nbsp;
-                  <div class="col-md-3">
-                    <span>聯絡電話:</span>
+        
+                  <div>
+                    <span class="fa-solid fa-phone">聯絡電話:</span>
                     <input type="tel" aria-setsize="10" class="form-control" id="phone" name="phone"
                     pattern="[0-9]{10}"
                     size="10" required>
                   </div>
 
-                
-                
-                <div class="col-12">
-                    <label for="inputState" class="form-label">地址</label>
-                    <span>地址</span>
+                    <!-- 航班編號 -->
+                    <!-- 搭車人數行李件數 -->
+                    <!-- 地址 -->
+                  <div class="col-12">
+                    <label for="inputState" class="fa-solid fa-house form-label">地址</label>
                     <select id="inputState" class="form-select">
                         <option selected>縣市</option>
                         <option>台北市</option>
                         <option>新北市</option>
                     </select>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="請輸入區">
-                </div>
-                <div class="col-12">
-                  <label for="inputAddress2" class="form-label">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputState" class="form-label">縣市</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>縣市</option>
-                        <option>台北市</option>
-                        <option>新北市</option>
-                      </select>
-                </div>
-                <div class="col-md-4">
-                  <label for="inputState" class="form-label">鄉鎮區市</label>
-                  <select id="inputState" class="form-select">
-                    <option selected>區域</option>
-                    <option>新莊區</option>
-                    <option>三重區</option>
-                  </select>
-                </div>
-                <br>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      已閱讀且同意用車注意事項
-                    </label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="請輸入區">
                   </div>
-                </div>
+
+            
+                  <!-- 已閱讀且同意用車注意事項 -->
+                  <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                        <label class="form-check-label" for="gridCheck">
+                        已閱讀且同意用車注意事項
+                        </label>
+                    </div>
+                  </div>
+
+                    <!-- 回傳按鈕 -->
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary btnColor" >資料回傳line@</button>
                 </div>
-              </form>
+            </form>
 
         </div>
     </div>
