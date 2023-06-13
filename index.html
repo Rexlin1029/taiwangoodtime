@@ -15,6 +15,17 @@
         }
     </style>
     <script>
+        function input_1(){
+            var result = "";
+        $("input[type=radio]:checked").each(function () {
+        result = $(this).val() ;
+        }); 
+        return result;
+        }
+   
+    </script>
+    
+    <script>
                 var testInput = document.getElementById("testInput");
                 var submitBtn = document.querySelector(".submitBtn");
 
@@ -30,7 +41,7 @@
 </head>
 <body>
   <div class="container">
-    <h3 class="col-10 mx-auto my-1">天晴旅遊．機場接送訂單</h3>
+    <h3 class="col-10 mx-auto my-1"><i class="fa-solid fa-cloud-sun" ></i> &nbsp;&nbsp;天晴旅遊．機場接送訂單</h3>
     <div class="row ">
         <div class="col-10 mx-auto my-5" >
             <form class="row g-2">
@@ -136,7 +147,7 @@
 
                     <!-- 回傳按鈕 -->
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary btnColor" >資料回傳line@</button>
+                  <button type="submit" class="btn btn-primary btnColor" onclick="input_1();" >資料回傳line@</button>
                 </div>
             </form>
 
