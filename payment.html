@@ -28,7 +28,9 @@
                       <p class="card-text">439540386444</p>
                       <img src="./img/中國信託QR.png" style="width: 130px;height: 130px;" alt="">
                       <button class="btn btn-primary">複製帳號</button>
+                      <img src="./img/copy.png" alt="" id="cover" style="width: 50px;height:50;display:block;" >
                     </div>
+                    
                 </div>
                 <div class="card" style="width: 18rem; margin-top: 20px;">
                     <img class="card-img-top" src="./img/streetpay.jpg" alt="Card image cap" style="height: 190px;">
@@ -49,21 +51,26 @@
     
 
     <script>
-        console.clear();
-
-
+   
         const btnCopy = document.querySelector('.btnCopy');
-
+        const cover=document.getElementById('#cover');
         btnCopy.addEventListener('click', function() {
-            const range = document.createRange();
-            const texts = document.querySelector('.texts');
-            range.selectNode(texts);
+
+            cover.style.display='block';
+            setTimeout(function(){
+                cover.style.display='none';
+            },1000) 
+
+            // const range = document.createRange();
+            // const texts = document.querySelector('.texts');
+            // range.selectNode(texts);
             
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            document.execCommand('copy');
-            selection.removeAllRanges();
+            // const selection = window.getSelection();
+            // selection.removeAllRanges();
+            // selection.addRange(range);
+            // document.execCommand('copy');
+            // selection.removeAllRanges();
+
         });
 
     </script>
