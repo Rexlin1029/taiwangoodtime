@@ -25,10 +25,11 @@
                     <div class="card-body">
                       <h5 class="card-title">中國信託銀行匯款</h5>
                       <p class="card-text">代碼：822</p>
-                      <p class="card-text">439540386444</p>
+                    
+                        <p class="card-text col-md-7" style="float:left; padding-right:10px;">439540386444</p> 
+                      <button class="btn btn-primary " style="float:left;">複製帳號</button>
                       <img src="./img/中國信託QR.png" style="width: 130px;height: 130px;" alt="">
-                      <button class="btn btn-primary">複製帳號</button>
-                      <img src="./img/copy.png" alt="" id="cover" style="width: 50px;height:50;display:block;" >
+                      <img src="./img/copy.png" alt="" id="cover" style="position:absolute; z-index: 1;"  >
                     </div>
                     
                 </div>
@@ -53,8 +54,9 @@
     <script>
    
         const btnCopy = document.querySelector('.btnCopy');
-        const cover=document.getElementById('#cover');
-        btnCopy.addEventListener('click', function() {
+        const cover=document.getElementById('cover');
+        // btnCopy.addEventListener('click', function() {
+            btnCopy.addEventListener('click', function() {
 
             cover.style.display='block';
             setTimeout(function(){
@@ -71,7 +73,14 @@
             // document.execCommand('copy');
             // selection.removeAllRanges();
 
-        });
+
+            // function copy() {
+            //     const URL = document.getElementById("URL")
+            //     navigator.clipboard.writeText(URL.innerText)
+            //     .then(() => alert('copied'))
+            //     .catch(error => console.log(error))}
+
+            //    });
 
     </script>
 </body>
