@@ -22,25 +22,30 @@
             <div class="col-10 mx-auto ">
                 <div class="card my-5" style="width: 18rem;">
                     <img class="card-img-top" src="./img/chinatrust.jpg" alt="Card image cap">
-                    <div class="card-body">
+                    <div class="card-body" >
                       <h5 class="card-title">中國信託銀行匯款</h5>
                       <p class="card-text">代碼：822</p>
                     
-                        <p class="card-text col-md-7" style="float:left; padding-right:10px;">439540386444</p> 
-                      <button class="btn btn-primary " style="float:left;">複製帳號</button>
+                        <p class="card-text"  id="copy1">439540386444</p> 
+                      <button class="btn btn-primary " onclick="copyEvent('copy1','cover0')">複製帳號</button>
                       <img src="./img/中國信託QR.png" style="width: 130px;height: 130px;" alt="">
-                      <img src="./img/copy.png" alt="" id="cover" style="position:absolute; z-index: 1;"  >
+                      <img src="./img/copy.png" alt="" id="cover0" style="position:absolute; z-index: 1; top:200px;right:40px; width: 200px; height: 200px; display:none"  >
                     </div>
                     
                 </div>
                 <div class="card" style="width: 18rem; margin-top: 20px;">
                     <img class="card-img-top" src="./img/streetpay.jpg" alt="Card image cap" style="height: 190px;">
                     <div class="card-body">
-                      <h5 class="card-title">街口支付</h5>
-                      <p class="card-text">代碼：396</p>
-                      <p class="card-text">908824601</p>
-                      <img src="./img/街口支付QR.png" style="width: 130px;height: 130px;" alt="">
-                      <button class="btn btn-primary">複製帳號</button>
+                        <h5 class="card-title">街口支付</h5>
+                        <p class="card-text">代碼：396</p>
+                      
+                          <p class="card-text"  id="copy2">908824601</p> 
+                        <button class="btn btn-primary "  onclick="copyEvent('copy2','cover2')">複製帳號</button>
+
+                        <img src="./img/街口支付QR.png" style="width: 130px;height: 130px; " alt="">
+                        <img src="./img/copy.png" alt="" id="cover2" style="position:absolute; z-index: 1; top:200px;right:40px; width: 200px; height: 200px; display:none"  >
+
+
                     </div>
                 </div>
                
@@ -50,38 +55,22 @@
     </div>
     
     
-
     <script>
-   
-        const btnCopy = document.querySelector('.btnCopy');
-        const cover=document.getElementById('cover');
-        // btnCopy.addEventListener('click', function() {
-            btnCopy.addEventListener('click', function() {
+        function copyEvent(id1,id2)
+        {
+            var str = document.getElementById(id1);
+            var cover1 = document.getElementById(id2);
 
-            cover.style.display='block';
+            window.getSelection().selectAllChildren(str);
+            document.execCommand("Copy");
+
+            cover1.style.display='block';
             setTimeout(function(){
-                cover.style.display='none';
-            },1000) 
-
-            // const range = document.createRange();
-            // const texts = document.querySelector('.texts');
-            // range.selectNode(texts);
-            
-            // const selection = window.getSelection();
-            // selection.removeAllRanges();
-            // selection.addRange(range);
-            // document.execCommand('copy');
-            // selection.removeAllRanges();
-
-
-            // function copy() {
-            //     const URL = document.getElementById("URL")
-            //     navigator.clipboard.writeText(URL.innerText)
-            //     .then(() => alert('copied'))
-            //     .catch(error => console.log(error))}
-
-            //    });
-
+                cover1.style.display='none';
+            },500) 
+        }
     </script>
+      
+     
 </body>
 </html>
