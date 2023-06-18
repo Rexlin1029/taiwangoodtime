@@ -15,30 +15,17 @@
     </style>
 </head>
 <body>
-   <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <div class="text">
-                <img src="https://picsum.photos/200/300?random=10" alt="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque voluptatibus ut hic corporis vero vitae? Quos quasi earum accusamus assumenda qui. Odit facilis ipsa, sint consectetur veritatis tempore earum.
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="text">
-                <img src="https://picsum.photos/200/300?random=10" alt="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque voluptatibus ut hic corporis vero vitae? Quos quasi earum accusamus assumenda qui. Odit facilis ipsa, sint consectetur veritatis tempore earum.
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="text">
-                <img src="https://picsum.photos/200/300?random=10" alt="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque voluptatibus ut hic corporis vero vitae? Quos quasi earum accusamus assumenda qui. Odit facilis ipsa, sint consectetur veritatis tempore earum.
-            </div>
-        </div>
-
-    </div>
-   </div>
-
+    <p id="copy">This is the copy string!</p>
+    <button type="button" onclick="copyEvent('copy')">Copy</button>
+    
+    <script>
+        function copyEvent(id)
+        {
+            var str = document.getElementById(id);
+            window.getSelection().selectAllChildren(str);
+            document.execCommand("Copy")
+        }
+    </script>
 
 
 
