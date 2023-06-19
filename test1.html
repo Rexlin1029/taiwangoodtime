@@ -4,35 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- bootstrap.css -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/09fb968f77.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <title>HELLO.WORLD!</title>
+    <title> 機場接送訂單</title>
     <style>
-        .text img{
-            width:100%
+        .btnColor {
+            color: greenyellow;
         }
     </style>
+    <script>
+
+        // var result = "";
+        // function submit(){
+        //     $("input[name=flexRadioDefault]:checked").each(function () {
+        // result = $(this).val() ;
+        // });
+        //  window.location='line://oaMessage/@993nobqk/'+result;
+        // };
+     let fname = document.getElementById('fname').value;
+     console.log(fname);   
+     
+</script>
+    
 </head>
 <body>
-    <p id="copy">This is the copy string!</p>
-    <button type="button" onclick="copyEvent('copy')">Copy</button>
+  <div class="form">
+    <form action="">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="your first name" value="Lin">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="your last name" value="shinda">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your email" value="shinda1029@gmail.com">
+
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="australia">Australia</option>
+            <option value="canada" selected>Canada</option>
+            <option value="usa">USA</option>
+
+        </select>
+
+
+        <label for="gender">Gender</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" checked>
+        <label for="female">female</label>
+        <input type="radio" id="other" name="gender" value="other" >
+        <label for="other">other</label>
+        <br><br>
+
+        <label >Hobbies  <i>(Optional)</i>  </label>
+
+        <div class="form-inline">
+            <label ><input type="checkbox" name="hobbies[]" value="sports" checked>Sports</label>
+            <label ><input type="checkbox" name="hobbies[]" value="movies" checked>Movies</label>
+            <label ><input type="checkbox" name="hobbies[]" value="music">Music</label>
+        </div>
+
+        <input type="button" value="submit">
+
+    </form>
+  </div>
+
+
+
     
-    <script>
-        function copyEvent(id)
-        {
-            var str = document.getElementById(id);
-            window.getSelection().selectAllChildren(str);
-            document.execCommand("Copy")
-        }
-    </script>
-
-
-
-
-   <!-- bootstrap.js -->
-   <!-- popper.js -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/popper.min.js"></script>
 </body>
+<!-- <script>
+
+    // var result = "";
+    // function submit(){
+    //     $("input[name=flexRadioDefault]:checked").each(function () {
+    // result = $(this).val() ;
+    // });
+    //  window.location='line://oaMessage/@993nobqk/'+result;
+    // };
+ let fname = document.getElementById('fname').value;
+ console.log(fname);   
+ 
+</script> -->
 </html>
