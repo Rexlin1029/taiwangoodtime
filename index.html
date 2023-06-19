@@ -15,29 +15,17 @@
         }
     </style>
     <script>
-        function input_1(){
+
             var result = "";
-        $("input[type=radio]:checked").each(function () {
-        result = $(this).val() ;
-        }); 
-        return result;
-        }
-   
+            function submit(){
+                $("input[name=flexRadioDefault]:checked").each(function () {
+            result = $(this).val() ;
+            });
+             window.location='line://oaMessage/@993nobqk/'+result;
+            };
+         
     </script>
     
-    <script>
-                var testInput = document.getElementById("testInput");
-                var submitBtn = document.querySelector(".submitBtn");
-
-                function FsubmitBtn(value) {
-                var str = "";
-                var submitValue = testInput.value;
-                str = submitValue;
-                alert(str);
-                }
-                submitBtn.addEventListener("click", FsubmitBtn);
-
-    </script>
 </head>
 <body>
   <div class="container">
