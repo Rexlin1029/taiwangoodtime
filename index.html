@@ -22,7 +22,7 @@
     <h1 class="col-10 mx-auto my-1 "  style="text-align: center; padding-top:15px ;" ><i class="fa-solid fa-cloud-sun" ></i> &nbsp;&nbsp;客戶訂單</h1>
     <div class="row ">
         <div class="col-10 mx-auto my-5" >
-            <form class="row g-2">
+            <form class="row g-2 needs-validation"   novalidate>
                     <!-- 接送機 -->
                  <div class="form-check col-md-6 ">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="送機" checked>
@@ -56,14 +56,21 @@
                     
                     <label for="username" class="col-md-10 col-form-label" style="display:block;"><i class="fa-solid fa-user"></i>姓名</label>&nbsp;&nbsp; 
                     <div class="col-md-10">
-                    <input type="text" class="form-control" id="username">
+                    <input type="text" class="form-control" id="username" required>
+                    <div class="valid-feedback">
+                        Looks good!
                     </div>
+                  </div>
+
+              
+
+
                   </div>
         
                   <div class="input-group mb-2">
                     <span class="fa-solid fa-phone" style="margin-top:10px;">聯絡電話</span>&nbsp;&nbsp;
                     <input type="tel" aria-setsize="10" class="form-control" id="phone" name="phone"
-                    pattern="[0-9]{10}"
+                    
                     size="10" required>
                   </div>
 
@@ -134,24 +141,54 @@
   </div>
 
     <script>
-        let text = "天晴旅遊%0A%0A機場訂單%0A===========";
-        function getVal(){
+        // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
+        // function getVal(){
 
-            //獲取單選匡的值
-            let radios1 = document.getElementsByName("flexRadioDefault");
-            for(var i=0;i<radios1.length;i++){
-                if(radios1[i].checked){
-                    text += "%0A服務:%0D"+radios1[i].value+";";
-                }
-            }
+        //     //獲取單選匡的值
+        //     let radios1 = document.getElementsByName("flexRadioDefault");
+        //     for(var i=0;i<radios1.length;i++){
+        //         if(radios1[i].checked){
+        //             text += "%0A服務:%0D"+radios1[i].value+";";
+        //         }
+        //     }
             
-            window.location='line://oaMessage/@993nobqk/'+text;
-        }
+        //     window.location='line://oaMessage/@993nobqk/'+text;
+        // }
 
         // //獲取文本的值
         // var text = document.getElementById();
         // str = "文本"+text.value+";";
-       
+       // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        let radios1 = document.getElementsByName("flexRadioDefault");
+            for(var i=0;i<radios1.length;i++){
+                if(radios1[i].checked){
+                text += "%0A服務:%0D"+radios1[i].value+";";
+                 }
+             }
+            
+             window.location='line://oaMessage/@993nobqk/'+text;
+
+
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 
     </script>
 
