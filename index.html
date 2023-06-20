@@ -141,12 +141,16 @@
             let radios1 = document.getElementsByName("flexRadioDefault");
             for(var i=0;i<radios1.length;i++){
                 if(radios1[i].checked){
-                    text += "服務"+radios1[i].value+";";
+                    text += "%0A服務"+radios1[i].value+";";
                 }
             }
             
             window.location='line://oaMessage/@993nobqk/'+text;
         }
+
+        // //獲取文本的值
+        // var text = document.getElementById();
+        // str = "文本"+text.value+";";
        
 
     </script>
