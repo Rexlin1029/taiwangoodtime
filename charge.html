@@ -15,8 +15,8 @@
         text-align:center;
        }
        .tt th{
-       background: blueviolet;
-       color: white;
+       background: #C7C7E2;
+      
 
        }
     </style>
@@ -24,74 +24,157 @@
 </head>
 <body>
    
-    <ul class="list-group">
-        <li class="list-group-item">夜間加成$200</li>
-        <li class="list-group-item">搬運行李上樓＄200</li>
-        <li class="list-group-item">機場舉牌協助接人＄200</li>
-        <li class="list-group-item">多點接送，每五公里收費100，以google map最短路徑計算</li>
-        <li class="list-group-item">若需收據，由隨車司機提供索取，請於訂車時提出需求</li>
-      </ul>
-      
-      <div class="accordion" id="accordionPanelsStayOpenExample">
+    <h3 style="margin-top: 50px; margin-bottom: 30px;">各地區收費表</h3>
+     
+      <div class="accordion" id="accordionExample">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-              雙北・基隆・宜蘭
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              台北・新北・基隆・宜蘭
             </button>
           </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                <table class="table">
-                    <tr>
-                        <td>台北</td>
-                        <td>基隆</td>
-                        <td>桃園</td>
-                        <td>宜蘭</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+                <table class="table table-bordered  table-striped tt">
+                    <thead>
+                        <tr>
+                            <th scope="col">地區</td>
+                            <th scope="col">台北市</td>
+                            <th scope="col">新北市</td>
+                            <th scope="col">基隆</td>
+                            <th scope="col">宜蘭</td>
+                                   
+                        
+                                  
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <td>五人座轎車</td>
+                            <td>900</td>
+                            <td>1000</td>
+                            <td>1300</td>
+                            <td>1800</td>
+                        </tr> 
+                        <tr>
+                            <td>休旅車</td>
+                            <td>1200</td>
+                            <td>1300</td>
+                            <td>1700</td>
+                            <td>2200</td>
+                        </tr>
+                        <tr>
+                            <td>九人座大車</td>
+                            <td>2000</td>
+                            <td>2100</td>
+                            <td>2500</td>
+                            <td>3000</td>
+                        </tr>
+                        
+                    </tbody>
                 </table>
+
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               桃園・新竹・苗栗
             </button>
           </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                <table class="table">
-                    <tr>
-                        <td>台北</td>
-                        <td>基隆</td>
-                        <td>桃園</td>
-                        <td>宜蘭</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+                <table class="table table-bordered  table-striped tt">
+                    <thead>
+                        <tr>
+                            <th scope="col">地區</td>
+                            <th scope="col">桃園</td>
+                            <th scope="col">新竹</td>
+                            <th scope="col">苗栗</td>
+                      
+                                   
+                        
+                                  
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr >
+                            <td>五人座轎車</td>
+                            <td>900</td>
+                            <td>1000</td>
+                            <td>1300</td>
+                            
+                        </tr> 
+                        <tr>
+                            <td>休旅車</td>
+                            <td>1200</td>
+                            <td>1300</td>
+                            <td>1700</td>
+                         
+                        </tr>
+                        <tr>
+                            <td>九人座大車</td>
+                            <td>2000</td>
+                            <td>2100</td>
+                            <td>2500</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                        
+                
                 </table>
+
+
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               台中・彰化・南投
             </button>
           </h2>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                <table class="table">
-                    <tr>
-                        <td>台中</td>
-                        <td>彰化</td>
-                        <td>南投</td>
+                <table class="table table-bordered  table-striped tt">
+                    <thead>
+                        <tr>
+                            <th scope="col">地區</td>
+                            <th scope="col">台中地區</td>
+                            <th scope="col">彰化</td>
+                            <th scope="col">南投</td>
+                            
+                                   
                         
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
+                                  
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <td>五人座轎車</td>
+                            <td>900</td>
+                            <td>1000</td>
+                            <td>1300</td>
+                            
+                        </tr> 
+                        <tr>
+                            <td>休旅車</td>
+                            <td>1200</td>
+                            <td>1300</td>
+                            <td>1700</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>九人座大車</td>
+                            <td>2000</td>
+                            <td>2100</td>
+                            <td>2500</td>
+                        </tr>
+                        
+                    </tbody>
                 </table>
             </div>
           </div>
@@ -99,95 +182,16 @@
       </div>
 
 
+      <h3 style="margin-top: 50px;">加價服務</h3>
+      <ul class="list-group" >
+        <li class="list-group-item">夜間加成$200</li>
+        <li class="list-group-item">搬運行李上樓＄200</li>
+        <li class="list-group-item">機場舉牌協助接人＄200</li>
+        <li class="list-group-item">多點接送，每五公里收費100，以google map最短路徑計算</li>
+        <li class="list-group-item">若需收據，由隨車司機提供索取，請於訂車時提出需求</li>
+      </ul>
+      
 
-
-    <div>
-
-     
-
-
-
-
-        <table class="table  table-bordered  table-striped tt">
-            <thead>
-                <tr>
-                    <th scope="col">地區</td>
-                    <th scope="col">五人</td>
-                    <th scope="col">休旅</td>
-                    <th scope="col">九人座</td>
-                    <th scope="col">九人座賓士</td>
-                           
-                
-                          
-                </tr>
-            </thead>
-            <tbody>
-                <tr >
-                    <td>雙北市區</th>
-                    <td>900</td>
-                    <td>1000</td>
-                    <td>1300</td>
-                    <td>1800</td>
-                </tr> 
-                <tr>
-                    <td>基隆</th>
-                    <td>1200</td>
-                    <td>1300</td>
-                    <td>1700</td>
-                    <td>2200</td>
-                </tr>
-                <tr>
-                    <td>宜蘭</th>
-                    <td>2000</td>
-                    <td>2100</td>
-                    <td>2500</td>
-                    <td>3000</td>
-                </tr>
-                <tr>
-                    <td>新竹</th>
-                    <td>1200</td>
-                    <td>1300</td>
-                    <td>1600</td>
-                    <td>2100</td>
-                </tr>
-                <tr>
-                    <td>台中市區</th>
-                    <td>2200</td>
-                    <td>2300</td>
-                    <td>2500</td>
-                    <td>3000</td>
-                </tr>
-                <tr>
-                    <td>台中市區</th>
-                    <td>2200</td>
-                    <td>2300</td>
-                    <td>2500</td>
-                    <td>3000</td>
-                </tr>
-                <tr>
-                    <td>台中市區</th>
-                    <td>2200</td>
-                    <td>2300</td>
-                    <td>2500</td>
-                    <td>3000</td>
-                </tr>
-                <tr>
-                    <td>台中市區</th>
-                    <td>2200</td>
-                    <td>2300</td>
-                    <td>2500</td>
-                    <td>3000</td>
-                </tr>
-                <tr>
-                    <td>台中市區</th>
-                    <td>2200</td>
-                    <td>2300</td>
-                    <td>2500</td>
-                    <td>3000</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>  
 
    <!-- bootstrap.js -->
    <!-- popper.js -->
