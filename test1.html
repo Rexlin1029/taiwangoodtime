@@ -9,82 +9,101 @@
     <script src="https://kit.fontawesome.com/09fb968f77.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title> 機場接送訂單</title>
-    <style>
-        .btnColor {
-            color: greenyellow;
-        }
-    </style>
-    <script>
 
-        // var result = "";
-        // function submit(){
-        //     $("input[name=flexRadioDefault]:checked").each(function () {
-        // result = $(this).val() ;
-        // });
-        //  window.location='line://oaMessage/@993nobqk/'+result;
-        // };
-     let fname = document.getElementById('fname').value;
-     console.log(fname);   
-     
-</script>
-    
+ 
 </head>
 <body>
-  <div class="form">
-    <form action="">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="your first name" value="Lin">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="your last name" value="shinda">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your email" value="shinda1029@gmail.com">
-
-        <label for="country">Country</label>
-        <select name="country" id="country">
-            <option value="australia">Australia</option>
-            <option value="canada" selected>Canada</option>
-            <option value="usa">USA</option>
-
-        </select>
-
-
-        <label for="gender">Gender</label>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" checked>
-        <label for="female">female</label>
-        <input type="radio" id="other" name="gender" value="other" >
-        <label for="other">other</label>
-        <br><br>
-
-        <label >Hobbies  <i>(Optional)</i>  </label>
-
-        <div class="form-inline">
-            <label ><input type="checkbox" name="hobbies[]" value="sports" checked>Sports</label>
-            <label ><input type="checkbox" name="hobbies[]" value="movies" checked>Movies</label>
-            <label ><input type="checkbox" name="hobbies[]" value="music">Music</label>
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            必填
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+ 
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
 
-        <input type="button" value="submit">
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
 
-    </form>
-  </div>
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
 
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 
 
     
-</body>
-<!-- <script>
 
-    // var result = "";
-    // function submit(){
-    //     $("input[name=flexRadioDefault]:checked").each(function () {
-    // result = $(this).val() ;
-    // });
-    //  window.location='line://oaMessage/@993nobqk/'+result;
-    // };
- let fname = document.getElementById('fname').value;
- console.log(fname);   
- 
-</script> -->
+</body>
+
 </html>
