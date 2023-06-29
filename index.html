@@ -7,6 +7,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/09fb968f77.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title> 機場接送訂單</title>
     <style>
@@ -162,27 +166,27 @@
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   
-  var forms = document.querySelectorAll('.needs-validation')
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
+//   var forms = document.querySelectorAll('.needs-validation')
+//   // Loop over them and prevent submission
+//   Array.prototype.slice.call(forms)
+//     .forEach(function (form) {
+//       form.addEventListener('submit', function (event) {
         
         
         
         
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+//         if (!form.checkValidity()) {
+//           event.preventDefault()
+//           event.stopPropagation()
        
           
-        }
-        return false;
-        console.log("dddd");
-        form.classList.add('was-validated')
+//         }
+        
+//         console.log("dddd");
+//         form.classList.add('was-validated')
 
-      }, false)
-    })
+//       }, false)
+//     })
 
    
 
@@ -207,6 +211,14 @@
         //     window.location='line://oaMessage/@993nobqk/'+text;
         // }
 
+    </script>
+    <script>
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var yyyy = today.getFullYear();
+      today = yyyy + '-' + mm + '-' + dd;
+      document.getElementById("start").value = today;
     </script>
 
 
