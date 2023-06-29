@@ -132,7 +132,7 @@
 
                     <!-- 回傳按鈕 -->
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary btnColor" onclick="getVal()" >資料回傳line@</button>
+                  <button type="submit" class="btn btn-primary btnColor"  >資料回傳line@</button>
                 </div>
             </form>
 
@@ -159,36 +159,53 @@
         // var text = document.getElementById();
         // str = "文本"+text.value+";";
        // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  
   var forms = document.querySelectorAll('.needs-validation')
-
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
+        
+        
+        
+        
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
+       
+          
         }
-
-        let radios1 = document.getElementsByName("flexRadioDefault");
-            for(var i=0;i<radios1.length;i++){
-                if(radios1[i].checked){
-                text += "%0A服務:%0D"+radios1[i].value+";";
-                 }
-             }
-            
-             window.location='line://oaMessage/@993nobqk/'+text;
-
-
-
+        return false;
+        console.log("dddd");
         form.classList.add('was-validated')
+
       }, false)
     })
-})()
+
+   
+
+
+
+
+
+
+
+
+        // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
+        // function getVal(){
+
+        //     //獲取單選匡的值
+        //     let radios1 = document.getElementsByName("flexRadioDefault");
+        //     for(var i=0;i<radios1.length;i++){
+        //         if(radios1[i].checked){
+        //             text += "%0A服務:%0D"+radios1[i].value+";";
+        //         }
+        //     }
+            
+        //     window.location='line://oaMessage/@993nobqk/'+text;
+        // }
 
     </script>
 
