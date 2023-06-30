@@ -145,19 +145,20 @@
   </div>
 
     <script>
-        // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
-        // function getVal(){
+        let text = "天晴旅遊%0A%0A機場訂單%0A===========";
+        function getVal(){
 
-        //     //獲取單選匡的值
-        //     let radios1 = document.getElementsByName("flexRadioDefault");
-        //     for(var i=0;i<radios1.length;i++){
-        //         if(radios1[i].checked){
-        //             text += "%0A服務:%0D"+radios1[i].value+";";
-        //         }
-        //     }
-            
-        //     window.location='line://oaMessage/@993nobqk/'+text;
-        // }
+            //獲取單選匡的值
+            let radios1 = document.getElementsByName("flexRadioDefault");
+            let input1 = document.getElementById("#start");
+            for(var i=0;i<radios1.length;i++){
+                if(radios1[i].checked){
+                    text += "%0A服務:%0D"+radios1[i].value+"%0A:%0D";
+                }
+            }
+            text += "%0A預約時間:%0D"+input1.value+"%0A:%0D";
+            window.location='line://oaMessage/@993nobqk/'+text;
+        }
 
         // //獲取文本的值
         // var text = document.getElementById();
@@ -187,29 +188,6 @@
 
 //       }, false)
 //     })
-
-   
-
-
-
-
-
-
-
-
-        // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
-        // function getVal(){
-
-        //     //獲取單選匡的值
-        //     let radios1 = document.getElementsByName("flexRadioDefault");
-        //     for(var i=0;i<radios1.length;i++){
-        //         if(radios1[i].checked){
-        //             text += "%0A服務:%0D"+radios1[i].value+";";
-        //         }
-        //     }
-            
-        //     window.location='line://oaMessage/@993nobqk/'+text;
-        // }
 
     </script>
     <script>
