@@ -147,7 +147,7 @@
     <script>
         let text = "天晴旅遊%0A%0A機場訂單%0A===========";
         function getVal(){
-
+              console.log(text);
             //獲取單選匡的值
             let radios1 = document.getElementsByName("flexRadioDefault");
             let input1 = document.getElementById("#start");
@@ -157,7 +157,7 @@
                 }
             }
             text += "%0A預約時間:%0D"+input1.value+"%0A:%0D";
-            console.log(text);
+            
             window.location='line://oaMessage/@993nobqk/'+text;
             
         }
