@@ -136,7 +136,7 @@
 
                     <!-- 回傳按鈕 -->
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary btnColor"  >資料回傳line@</button>
+                  <button type="submit" class="btn btn-primary btnColor"  onclick="getVal();" >資料回傳line@</button>
                 </div>
             </form>
 
@@ -157,7 +157,9 @@
                 }
             }
             text += "%0A預約時間:%0D"+input1.value+"%0A:%0D";
+            console.log(text);
             window.location='line://oaMessage/@993nobqk/'+text;
+            
         }
 
         // //獲取文本的值
