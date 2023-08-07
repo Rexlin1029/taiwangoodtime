@@ -7,10 +7,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/09fb968f77.js" crossorigin="anonymous"></script>
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"></script> -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title> 機場接送訂單</title>
     <style>
@@ -26,7 +26,7 @@
     <h1 class="col-10 mx-auto my-1 "  style="text-align: center; padding-top:15px ;" ><i class="fa-solid fa-cloud-sun" ></i> &nbsp;&nbsp;客戶訂單</h1>
     <div class="row ">
         <div class="col-10 mx-auto my-5" >
-            <form class="row g-2 needs-validation"   novalidate>
+            <form class="row g-2 "   >
                     <!-- 接送機 -->
                  <div class="form-check col-md-6 ">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="送機" checked>
@@ -143,23 +143,23 @@
   </div>
 
     <script>
-        let text = "天晴旅遊%0A%0A機場訂單%0A===========";
+        // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
         function getVal(){
-              console.log(text);
+              console.log("555");
             //獲取單選匡的值
-            let radios1 = document.getElementsByName("flexRadioDefault");
-            let input1 = document.getElementById("#start");
-            for(var i=0;i<radios1.length;i++){
-                if(radios1[i].checked){
-                    text += "%0A服務:%0D"+radios1[i].value+"%0A:%0D";
-                }
-            }
-            text += "%0A預約時間:%0D"+input1.value+"%0A:%0D";
+            // let radios1 = document.getElementsByName("flexRadioDefault");
+            // let input1 = document.getElementById("start");
+            // for(var i=0;i<radios1.length;i++){
+            //     if(radios1[i].checked){
+            //         text += "%0A服務:%0D"+radios1[i].value+"%0A:%0D";
+            //     }
+            // }
+            // text += "%0A預約時間:%0D"+input1.value+"%0A:%0D";
             
-            window.location='line://oaMessage/@993nobqk/'+text;
+            // window.location='line://oaMessage/@993nobqk/'+text;
             
         }
-
+  
         // //獲取文本的值
         // var text = document.getElementById();
         // str = "文本"+text.value+";";
@@ -189,15 +189,15 @@
 //       }, false)
 //     })
 
-    </script>
-    <script>
+</script>
+    <!-- <script>
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
       var mm = String(today.getMonth() + 1).padStart(2, '0');
       var yyyy = today.getFullYear();
       today = yyyy + '-' + mm + '-' + dd;
       document.getElementById("start").value = today;
-    </script>
+    </script> -->
 
 
     
