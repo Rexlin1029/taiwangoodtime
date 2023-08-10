@@ -7,10 +7,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/09fb968f77.js" crossorigin="anonymous"></script>
-    <!-- <script
-      src="https://code.jquery.com/jquery-3.7.0.min.js"
-      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"></script> -->
+  
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title> 機場接送訂單</title>
     <style>
@@ -118,8 +115,8 @@
                   <!-- 車資支付方式 -->
                   <!-- 備註 -->
                   <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">備註</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="如兒童座椅，中途多點接送，特殊尺寸行李....等需求，請在此處提出"></textarea>
+                    <label for="Textarea1" class="form-label">備註</label>
+                    <textarea class="form-control" id="Textarea1" rows="5" placeholder="如兒童座椅，中途多點接送，特殊尺寸行李....等需求，請在此處提出"></textarea>
                   </div>
                 
                   <!-- 已閱讀且同意用車注意事項 -->
@@ -134,7 +131,7 @@
 
                     <!-- 回傳按鈕 -->
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary btnColor"  onclick="getVal();" >資料回傳line@</button>
+                  <button type="submit" class="btn btn-primary btnColor" id="btn1" >資料回傳line@</button>
                 </div>
             </form>
 
@@ -143,9 +140,17 @@
   </div>
 
     <script>
+
+         var submitBtn = document.getElementById("btn1");
+         function FsubmitBtn(value) {
+          let text = "天晴旅遊%0A%0A機場訂單%0A===========";
+
+           alert("11111111");
+           window.location='line://oaMessage/@993nobqk/'+text;
+          }
+          submitBtn.addEventListener("click", FsubmitBtn);
         // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
-        function getVal(){
-              console.log("555");
+       
             //獲取單選匡的值
             // let radios1 = document.getElementsByName("flexRadioDefault");
             // let input1 = document.getElementById("start");
@@ -158,46 +163,21 @@
             
             // window.location='line://oaMessage/@993nobqk/'+text;
             
-        }
-  
+        
         // //獲取文本的值
         // var text = document.getElementById();
         // str = "文本"+text.value+";";
-       // Example starter JavaScript for disabling form submissions if there are invalid fields
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  
-//   var forms = document.querySelectorAll('.needs-validation')
-//   // Loop over them and prevent submission
-//   Array.prototype.slice.call(forms)
-//     .forEach(function (form) {
-//       form.addEventListener('submit', function (event) {
-        
-        
-        
-        
-//         if (!form.checkValidity()) {
-//           event.preventDefault()
-//           event.stopPropagation()
-       
-          
-//         }
-        
-//         console.log("dddd");
-//         form.classList.add('was-validated')
-
-//       }, false)
-//     })
 
 </script>
-    <!-- <script>
+    <script>
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
       var mm = String(today.getMonth() + 1).padStart(2, '0');
       var yyyy = today.getFullYear();
       today = yyyy + '-' + mm + '-' + dd;
       document.getElementById("start").value = today;
-    </script> -->
+    </script>
 
 
     
