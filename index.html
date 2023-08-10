@@ -134,6 +134,7 @@
                  
                 </div>
             </form>
+          
             <button type="submit" class="btn btn-primary btnColor" id="btn1" >資料回傳line@</button>
 
         </div>
@@ -146,7 +147,7 @@
          function FsubmitBtn(value) {
           let text = "天晴旅遊%0A%0A機場訂單%0A===========";
 
-           window.location='line://oaMessage/@993nobqk/'+'hello';
+           window.location='line://oaMessage/@993nobqk/'+text;
           }
           submitBtn.addEventListener("click", FsubmitBtn);
         // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
