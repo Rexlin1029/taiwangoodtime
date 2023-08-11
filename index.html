@@ -52,7 +52,7 @@
                     <input type="time" id="starttime" name="appt"
                      value="00:00" >
                   </div>
-                    <!-- 姓名連絡電話 -->
+                   <!-- 客戶姓名-->
                   <div class="input-group mb-2">
                     
                     <label for="username" class="col-md-10 col-form-label" style="display:block;"><i class="fa-solid fa-user"></i>姓名</label>&nbsp;&nbsp; 
@@ -61,7 +61,7 @@
                    
                   </div>
 
-              
+                   <!-- 聯絡電話-->
 
 
                   </div>
@@ -163,13 +163,24 @@
                     }
                 }
             }
+          //客戶姓名
+          let uname = document.getElementById("username").value;
+          //聯絡電話
+          let uphone = document.getElementById("phone").value;
+          //航班編號
+          let airline_n = document.getElementById("airportnum").value;
 
             
          
-          text = text+ "%0A搭乘日期："+orderdate+"%0A搭乘時間："+ordertime+"%0A服務類型："+stype;
+          text = text+ "%0A搭乘日期："+orderdate+"%0A搭乘時間："+ordertime
+                +"%0A服務類型："+stype
+                +"%0A姓名："+uname
+                +"%0A聯絡電話："+phone
+                +"%A航班編號："+airline_n;
           
            window.location='line://oaMessage/@993nobqk/'+text;
           }
+          
           submitBtn.addEventListener("click", FsubmitBtn);
         // let text = "天晴旅遊%0A%0A機場訂單%0A===========";
        
