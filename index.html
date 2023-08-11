@@ -110,7 +110,7 @@
                         <option>南投縣</option>
                         <option>其他</option>
                     </select>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="請輸入地址">
+                    <input type="text" class="form-control" id="address" placeholder="請輸入地址">
                   </div>
                   <!-- 車資支付方式 -->
                   <!-- 備註 -->
@@ -175,7 +175,8 @@
           let suitcase_n = document.getElementById("scase").value;
           //地址縣市
           let ncity = document.getElementById("city").value;
-
+          //地址
+          let naddress = document.getElementById("address").value;
             
          
           text = text+ "%0A搭乘日期："+orderdate+"%0A搭乘時間："+ordertime
@@ -185,8 +186,9 @@
                 +"%0A航班編號："+airline_n
                 +"%0A乘客人數："+psg_n
                 +"%0A行李件數："+suitcase_n
+                +"%0A地址："+ncity+naddress
                 +"%0A================";
-          
+                
            window.location='line://oaMessage/@993nobqk/'+text;
           }
 
