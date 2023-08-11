@@ -116,7 +116,7 @@
                   <!-- 備註 -->
                   <div class="mb-3">
                     <label for="Textarea1" class="form-label">備註</label>
-                    <textarea class="form-control" id="Textarea1" rows="5" placeholder="如兒童座椅，中途多點接送，特殊尺寸行李....等需求，請在此處提出"></textarea>
+                    <textarea class="form-control" id="textarea1" rows="5" placeholder="如兒童座椅，中途多點接送，特殊尺寸行李....等需求，請在此處提出"></textarea>
                   </div>
                 
                   <!-- 已閱讀且同意用車注意事項 -->
@@ -177,6 +177,8 @@
           let ncity = document.getElementById("city").value;
           //地址
           let naddress = document.getElementById("address").value;
+          //備註
+          let usernote = document.getElementById("textarea1").value;
             
          
           text = text+ "%0A搭乘日期："+orderdate+"%0A搭乘時間："+ordertime
@@ -187,8 +189,9 @@
                 +"%0A乘客人數："+psg_n
                 +"%0A行李件數："+suitcase_n
                 +"%0A地址："+ncity+naddress
+                +"%0A備註："+usernote
                 +"%0A================";
-                
+
            window.location='line://oaMessage/@993nobqk/'+text;
           }
 
