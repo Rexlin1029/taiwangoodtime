@@ -26,7 +26,7 @@
             <form class="row g-2 "   >
                     <!-- 接送機 -->
                  <div class="form-check col-md-6 ">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="送機" checked>
+                    <input class="form-check-input" type="radio" name="service" id="flexRadioDefault1" value="送機" checked>
                     <label class="form-check-label" for="flexRadioDefault1" >
                       送機
       
@@ -34,7 +34,7 @@
                   </div>
 
                   <div class="form-check col-md-6 ">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  value="接機" >
+                    <input class="form-check-input" type="radio" name="service" id="flexRadioDefault2"  value="接機" >
                     <label class="form-check-label" for="flexRadioDefault2">
                       接機
                     </label>
@@ -49,7 +49,7 @@
 
                   <div class="col-md-3">
                     <span>用車時間:</span>
-                    <input type="time" id="appt" name="appt"
+                    <input type="time" id="starttime" name="appt"
                      value="00:00" >
                   </div>
                     <!-- 姓名連絡電話 -->
@@ -146,10 +146,12 @@
          var submitBtn = document.getElementById("btn1");
          function FsubmitBtn(value) {
           let text = "天晴旅遊%0A%0A機場訂單%0A===========";
-          let ordertime = document.getElementById("start").value;
-          alert(ordertime);
-          text = text+ ordertime;
-
+          let orderdate = document.getElementById("start").value;
+          let ordertime = document.getElementById("starttime").value;
+          let stype = document.getElementsByName("service").value;
+         
+          text = text+ "%A搭乘日期："+orderdate+"%A搭乘時間："+ordertime+"%A服務類型："+stype;
+          
            window.location='line://oaMessage/@993nobqk/'+text;
           }
           submitBtn.addEventListener("click", FsubmitBtn);
