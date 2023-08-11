@@ -146,7 +146,7 @@
          var submitBtn = document.getElementById("btn1");
          function FsubmitBtn(value) {
           let text = "天晴旅遊%0A%0A機場訂單%0A===========";
-          let ordertime = document.getElementById("start");
+          let ordertime = document.getElementById("start").value;
           text = text+ ordertime;
 
            window.location='line://oaMessage/@993nobqk/'+text;
