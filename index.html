@@ -81,15 +81,15 @@
                         <input type="text" class="form-control" id="airportnum" size="8">
                         </div>
                     </div>
-                    <!-- 搭車人數行李件數 -->
+                    <!-- 搭車人數 -->
                         <div class="col mb-1">
                             <i class="fa-solid fa-people-group my-2">乘客人數</i>
-                          <input type="text" class="form-control" placeholder="人數" aria-label="passenager" >
+                          <input type="text" class="form-control" id="psn"  placeholder="人數" aria-label="passenager" >
                         </div>
-
+                    <!-- 行李件數 -->
                         <div class="col mb-1" >
                             <i class="fa-solid fa-suitcase-rolling my-2">行李件數</i>
-                          <input type="text" class="form-control" placeholder="規格32寸內" aria-label="suitcase">
+                          <input type="text" class="form-control" id="scase" placeholder="規格32寸內" aria-label="suitcase">
                         </div>
 
                     <!-- 地址 -->
@@ -169,6 +169,10 @@
           let uphone = document.getElementById("phone").value;
           //航班編號
           let airline_n = document.getElementById("airportnum").value;
+          //乘客人數
+          let psg_n = document.getElementById("psn").value;
+          //行李件數
+          let suitcase_n = document.getElementById("scase").value;
 
             
          
@@ -176,7 +180,9 @@
                 +"%0A服務類型："+stype
                 +"%0A姓名："+uname
                 +"%0A聯絡電話："+uphone
-                +"0%A航班編號："+airline_n;
+                +"%0A航班編號："+airline_n
+                +"%0A乘客人數："+psg_n
+                +"%0A行李件數："+suitcase_n;
           
            window.location='line://oaMessage/@993nobqk/'+text;
           }
