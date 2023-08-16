@@ -180,6 +180,20 @@
                     }
                 }
             }
+
+          //付款方式
+          let p_method = "";
+          var payment_Obj = document.getElementsByName("payment");
+            
+            for (var x = 0; x < payment_Obj.length; x++) {
+                if (payment_Obj[x].type == "radio") {
+                    if (payment_Obj[x].checked) {
+                        if (p_method  == "") {
+                          p_method =  payment_Obj[x].value;
+                        } 
+                    }
+                }
+            }
           //客戶姓名
           let uname = document.getElementById("username").value;
           //聯絡電話
@@ -206,6 +220,7 @@
                 +"%0A乘客人數："+psg_n
                 +"%0A行李件數："+suitcase_n
                 +"%0A地址："+ncity+naddress
+                +"%0A付款方式："+p_method
                 +"%0A備註：%0A"+usernote
                 +"%0A================";
 
