@@ -25,7 +25,7 @@
         <div class="col-10 mx-auto my-5" >
             <form class="row g-2 "   >
                     <!-- 接送機 -->
-                 <div class="form-check col-md-6 ">
+                 <div class=" col-md-6 ">
                     <input class="form-check-input" type="radio" name="service" id="flexRadioDefault1" value="送機" checked>
                     <label class="form-check-label" for="flexRadioDefault1" >
                       送機
@@ -33,7 +33,7 @@
                     </label>
                   </div>
 
-                  <div class="form-check col-md-6 ">
+                  <div class="col-md-6 ">
                     <input class="form-check-input" type="radio" name="service" id="flexRadioDefault2"  value="接機" >
                     <label class="form-check-label" for="flexRadioDefault2">
                       接機
@@ -76,9 +76,13 @@
                     <!-- 航班編號 -->
                     <div class="input-group mb-1">
                     
-                        <label for="airportnum" class="col-md-10 col-form-label"><i class="fa-solid fa-plane"></i>航班編號</label>&nbsp;&nbsp;
-                        <div class="col-md-10">
+                        <label for="airportnum" class="col-md-6 col-form-label"><i class="fa-solid fa-plane"></i>航班編號</label>&nbsp;&nbsp;
+                        <div class="col-md-10"  style="margin-right: 10px;">
                         <input type="text" class="form-control" id="airportnum" size="8">
+                        </div>
+                        <label for="terminalnum" class="col-md-6 col-form-label"><i class="fa-solid fa-plane"></i>航廈</label>&nbsp;&nbsp;
+                        <div class="col-md-10">
+                        <input type="text" class="form-control" id="terminalnum" size="8">
                         </div>
                     </div>
                     <!-- 搭車人數 -->
@@ -113,6 +117,28 @@
                     <input type="text" class="form-control" id="address" placeholder="請輸入地址">
                   </div>
                   <!-- 車資支付方式 -->
+                  <div class=" col-md-6  " style="margin-top: 15px;">
+                    <i class="fa-solid fa-sack-dollar" style="margin-bottom: 10px; display: block;">付款方式</i>
+                    <input class="form-check-input" type="radio" name="payment" id="radio2" value="現金隨車支付" checked>
+                    <label class="form-check-label" for="flexRadioDefault1" >
+                      現金隨車支付
+      
+                    </label>
+                  </div>
+                  <div class=" col-md-6 ">
+                    <input class="form-check-input" type="radio" name="payment" id="radio2" value="街口支付" >
+                    <label class="form-check-label" for="flexRadioDefault1" >
+                      街口支付
+      
+                    </label>
+                  </div>
+                  <div class=" col-md-6 ">
+                    <input class="form-check-input" type="radio" name="payment" id="radio2" value="銀行匯款" >
+                    <label class="form-check-label" for="flexRadioDefault1" >
+                      銀行匯款
+      
+                    </label>
+                  </div>
                   <!-- 備註 -->
                   <div class="mb-3">
                     <label for="Textarea1" class="form-label">備註</label>
